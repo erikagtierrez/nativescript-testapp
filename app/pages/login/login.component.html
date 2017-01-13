@@ -1,0 +1,11 @@
+<StackLayout>
+    <Image src="~/images/froppings.png" class="logo2" horizontalAlignment="center"></Image>
+    <StackLayout class="loginSection">
+        <TextField hint="Email Address" keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
+        <TextField hint="Password" secure="true"></TextField>
+        <GridLayout columns="*,auto" rows="*,auto" width="100%" height="100">
+            <Button row="0" col="0" [text]="isLogging ? 'Iniciar sesión' : 'Registrarse'" class="submit-button" (tap)="submit()"></Button>
+            <Button row="1" col="0" [text]="isLogging ? 'Registrarse' : 'Iniciar sesión'" (tap)="toggleDisplay()"></Button>
+        </GridLayout>
+    </StackLayout>
+</StackLayout>
