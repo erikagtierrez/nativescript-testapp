@@ -8,6 +8,7 @@ import { routes, navigatableComponents } from "./app.routing";
 import { HomeComponent } from './pages/home/home.component';
 import { AppComponent } from "./app.component";
 import { LoginComponent } from './pages/login/login.component';
+import {NativeScriptHttpModule} from "nativescript-angular";
 
 @NgModule({
     declarations: [
@@ -21,6 +22,7 @@ import { LoginComponent } from './pages/login/login.component';
         NativeScriptModule,
         NativeScriptFormsModule,
         NativeScriptRouterModule,
+        NativeScriptHttpModule,
         NativeScriptRouterModule.forRoot(routes),
         TNSFontIconModule.forRoot({
             'fa': 'font-awesome.css'
