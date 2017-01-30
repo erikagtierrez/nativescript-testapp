@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
                 data => {
                     console.log("Your account was successfully created.");
                     console.log(data);
-                    this.router.navigate(["/home"]);
+                    this.toggleDisplay();
                 },
                 () => {
                     console.log("Unfortunately we were unable to create your account.");

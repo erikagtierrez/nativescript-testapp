@@ -9,12 +9,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { AppComponent } from "./app.component";
 import { LoginComponent } from './pages/login/login.component';
 import {NativeScriptHttpModule} from "nativescript-angular";
+import {UploadImageComponent} from "./pages/uploadImage/uploadImage.component";
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
         LoginComponent,
+        UploadImageComponent,
         SIDEDRAWER_DIRECTIVES
     ],
     bootstrap: [AppComponent],

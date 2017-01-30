@@ -28,17 +28,13 @@
         </StackLayout>
     </StackLayout>
     <StackLayout tkMainContent class="home" height="100%">
-        <ListView [items]="myItems " height="100%">
-            <template let-item="item " let-i="index ">
-                <StackLayout [class.odd]="odd " [class.even]="even" class="card">
-                    <Image src="~/images/productodefault.png " stretch="fill" class="imageList"></Image>
-                    <DockLayout orientation="horizontal">
-                        <Label [text]="item"  dock="left" class="nameList"></Label>
-                        <Label class="fa listIcon" dock="right" text="{{'fa-heart' | fonticon}}" (tap)="openDrawer()"></Label> 
-                    </DockLayout>                 
-                </StackLayout>
-            </template>
-        </ListView>
-        <Label [text]="mainContentText " textWrap="true " class="drawerContentText "></Label>
+        <StackLayout [class.odd]="odd " [class.even]="even" class="card">
+            <Image #imageSelected src="content://media/external/images/media/16267"
+            stretch="fill" class="imageList"></Image>
+            <DockLayout orientation="horizontal">
+                <Label text="Nombre"  dock="left" class="nameList"></Label>
+                <Label class="fa listIcon" dock="right" text="{{'fa-heart' | fonticon}}" (tap)="openDrawer()"></Label>
+            </DockLayout>
+        </StackLayout>
     </StackLayout>
 </RadSideDrawer>

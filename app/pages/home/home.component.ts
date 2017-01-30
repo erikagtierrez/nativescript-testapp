@@ -31,13 +31,17 @@ export class HomeComponent implements OnInit {
     
     ngOnInit() { }
 
-     ngAfterViewInit() {
+    ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
         this._changeDetectionRef.detectChanges();
     }
 
-    public openDrawer() {
+    openDrawer() {
         this.drawer.toggleDrawerState();
+    }
+
+    openUploader(){
+        this.router.navigate(["/uploadImage"]);
     }
 
     exit(){
